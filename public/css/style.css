@@ -1,0 +1,119 @@
+
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Header */
+.navbar{
+    /* height: 70px; */
+    height: 5rem;
+}
+
+body{
+    position: relative;
+}
+
+.fa-compass{
+    font-size: 2rem;
+    color: #fe442d;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: rgb(237, 234, 234);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* position: absolute;
+    bottom: 0px; */
+}
+
+.f-info{
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 15px;
+    /* margin-bottom: 100px !important; */
+
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    
+}
+
+.f-info-socials a{
+    font-size: 20px;
+    color: black;
+    margin-left: 5px;
+}
+
+
+/* card */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    /* height: 200px;
+    width: 260px !important; */
+    object-fit: cover !important;
+}
+
+.card-img-overlay{
+    opacity: 0;
+    /* object-fit: cover !important; */
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+
+/*  */
+
+.add-btn{
+    color: white !important;
+    background-color: #fe442d !important;
+    border: none !important;
+}
+
+
+/* listing links */
+
+.listing-link{
+    text-decoration: none;
+}
+
+
+
+/* Map */
+
+#map {
+    height: 100px;
+    width: 100px;
+}

@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new</title>
+</head> -->
+
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3 class="text-center mt-2">Edit Your Listing</h3>
+
+    <div class="col-12">
+        <a href="/listings/<%= listing._id %>" class="btn btn-secondary mb-3">Back</a>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="/listings/<%= listing._id %>?_method=PUT" class="p-4  mt-3" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Title :</label>
+                        <input type="text" class="form-control" name="listing[title]" id="title" value="<%= listing.title %>">
+                    </div> <br>
+                    <div class="form-group">
+                        <label for="description">Description :</label>
+                        <textarea class="form-control" name="listing[description]" id="description" cols="40" rows="5"><%= listing.description %></textarea>
+                    </div> <br>
+
+                    <div class="form-group">
+                        <i>previous image :</i> <br>
+                        <!-- <img style="width: 200px; height: 100px;" src="<%= listing.image.url %>" alt="wonderlust image"> -->
+                        <img style="width: 200px; height: 100px;" src="<%= originalImageUrl %>" alt="wonderlust image">   
+                        <!-- originalImageUrl : changing the image by adjesting cloudinary and set there -->
+                    </div> <br>
+
+                    <div class="form-group">
+                        <label for="image">Upload Image :</label>
+                        <!-- <input type="text" class="form-control" name="listing[image]" id="image" value="<%= listing.image %>"> -->
+                        <input type="file" class="form-control" name="listing[image]" id="image">
+                    </div> <br>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="price">Price :</label>
+                            <input type="number" class="form-control" name="listing[price]" id="price" value="<%= listing.price %>">
+                        </div> <br>
+                        <div class="form-group col-md-6">
+                            <label for="country">Country :</label>
+                            <input type="text" class="form-control" name="listing[country]" id="country" value="<%= listing.country %>">
+                        </div>
+                    </div> <br>
+                    <div class="form-group">
+                        <label for="location">Location :</label>
+                        <input type="text" class="form-control" name="listing[location]" id="location" value="<%= listing.location %>">
+                    </div>  <br>
+                    <button type="submit" class="btn add-btn btn-block">Save</button>
+                </form> 
+                <br><hr>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
